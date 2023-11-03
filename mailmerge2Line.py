@@ -44,16 +44,16 @@ service_sheets = Create_Service(
 time.sleep(2)
 
 
-template_document_id = '1ydxJ1j9q2eJGqEfT4wiXXGSkkcThtqQi9maSRr6RK9Q'
-google_sheets_id = "1QAhRqpFaaDsjuNo1rcXWoHyylnPmVuTiGdhRJl3_JkA"
-folder_id = '1nffvWF1C3RHHcbkDTEFUh0paIsOVN_DF' # None --> save in the parent folder
+template_document_id = '1ydxJ1j9q2eJGqEfT4wiXXGSkkcThtqQi9maSRr6RK9Q' #2line template
+google_sheets_id = '1QAhRqpFaaDsjuNo1rcXWoHyylnPmVuTiGdhRJl3_JkA' #2line source
+folder_id = '1E408UgPuVXFmoEUntDPhqJX5SvS5eOxg' # None --> save in the parent folder
 
 responses = {}
 
 """
 Step 2. Load Records from Google Sheets
 """
-worksheet_name = 'list'
+worksheet_name = 'list2Lines' #2 line source
 responses['sheets'] = service_sheets.spreadsheets().values().get(
     spreadsheetId=google_sheets_id,
     range=worksheet_name,
